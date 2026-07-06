@@ -6,7 +6,7 @@
   <title>Ahmad & Samara — 16 Août 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,11 +16,7 @@
   <div class="splash-bg"></div>
   <div class="splash-center">
     <button id="splash-btn" aria-label="Ouvrir l'invitation">
-      <div class="splash-monogram">
-        <span style="font-family:var(--script)">A</span>
-        <span class="s-amp">&amp;</span>
-        <span style="font-family:var(--script)">S</span>
-      </div>
+      <div class="splash-mono">A <span class="s-amp">&amp;</span> S</div>
       <div class="splash-hint">Appuyer pour ouvrir</div>
     </button>
   </div>
@@ -41,28 +37,28 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">Wedding Day · 16 Août 2026</p>
       <h1 class="hero-names">
-        <span>Ahmad</span>
+        <span class="hn">Ahmad</span>
         <span class="hero-amp">&amp;</span>
-        <span>Samara</span>
+        <span class="hn">Samara</span>
       </h1>
       <p class="hero-sub">Bientôt mariés</p>
       <div class="ring-wrap" id="ring-wrap">
-        <img src="ring.png" alt="Alliances" class="ring-img">
+        <img src="ring.jpg" alt="Alliances" class="ring-img" loading="eager">
       </div>
     </div>
   </section>
 
-  <!-- ② INVITE -->
+  <!-- ② INVITE — frame shape as CSS, text on top -->
   <section class="sec invite-sec">
-    <div class="invite-scene reveal">
-      <div class="invite-frame-wrap">
-        <img src="invite-frame.png" alt="" class="invite-frame-img" aria-hidden="true">
-        <div class="invite-text-overlay">
-          <p class="inv-eyebrow"><span class="ps">C</span>hers <span class="ps">A</span>mis <em>&amp; Famille,</em></p>
+    <div class="sec-inner">
+      <div class="invite-frame reveal">
+        <img src="invite-frame.png" alt="" class="invite-bg-img" aria-hidden="true">
+        <div class="invite-content">
+          <p class="inv-eyebrow">Chers Amis &amp; Famille,</p>
           <div class="inv-divider">✦ ✦ ✦</div>
           <p class="inv-body">C'est avec une joie immense et un cœur rempli de bonheur que nous vous convions à partager avec nous ce moment unique et inoubliable. Votre présence illuminera ce jour exceptionnel et le rendra encore plus précieux à nos yeux.</p>
-          <p class="inv-body" style="margin-top:8px">Nous serions profondément honorés de vous voir à nos côtés pour célébrer l'amour et l'union.</p>
-          <div class="inv-sign"><span class="ps">A</span>hmad <span class="inv-amp">&amp;</span> <span class="ps">S</span>amara</div>
+          <p class="inv-body" style="margin-top:10px">Nous serions profondément honorés de vous voir à nos côtés pour célébrer l'amour et l'union.</p>
+          <div class="inv-sign">Ahmad &amp; Samara</div>
         </div>
       </div>
     </div>
@@ -71,8 +67,7 @@
   <!-- ③ CALENDAR -->
   <section class="sec cal-sec">
     <div class="sec-inner">
-      <div class="sec-label light">La Date</div>
-      <h2 class="sec-title light"><span class="ps" style="font-size:1.3em">A</span>oût <span class="is">2026</span></h2>
+      <h2 class="sec-title light cinzel">Août 2026</h2>
       <div class="cal-card reveal">
         <div class="cal-header">
           <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
@@ -84,7 +79,7 @@
           <div class="cd">10</div><div class="cd">11</div><div class="cd">12</div><div class="cd">13</div><div class="cd">14</div><div class="cd">15</div>
           <div class="cd wedding-day">
             <span class="wd-num">16</span>
-            <img src="wax-seal.png" alt="Mariage" class="wax-img">
+            <img src="wax-seal.png" alt="Mariage" class="wax-img" loading="lazy">
           </div>
           <div class="cd">17</div><div class="cd">18</div><div class="cd">19</div><div class="cd">20</div><div class="cd">21</div><div class="cd">22</div><div class="cd">23</div>
           <div class="cd">24</div><div class="cd">25</div><div class="cd">26</div><div class="cd">27</div><div class="cd">28</div><div class="cd">29</div><div class="cd">30</div>
@@ -97,7 +92,7 @@
   <!-- ④ COUNTDOWN -->
   <section class="sec countdown-sec">
     <div class="sec-inner">
-      <div class="sec-label">Compte à Rebours</div>
+      <div class="sec-label cinzel">Compte à Rebours</div>
       <div class="cd-wrap">
         <div class="cd-unit"><div class="cd-track" id="cd-days"><div class="cd-slide">00</div></div><div class="cd-label">Jours</div></div>
         <div class="cd-sep">:</div>
@@ -110,32 +105,38 @@
     </div>
   </section>
 
-  <!-- ⑤ PROGRAMME -->
+  <!-- ⑤ PROGRAMME — title ABOVE the frame -->
   <section class="sec prog-sec">
     <div class="sec-inner">
-      <!-- NO sec-label above -->
-      <h2 class="sec-title light" style="font-family:var(--serif);font-style:italic">Programme de l'Événement</h2>
-      <div class="prog-card">
-        <div class="timeline">
-          <div class="tl-item reveal"><div class="tl-time">17h30</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Cortège de mariage</div></div>
-          <div class="tl-item reveal"><div class="tl-time">18h00</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Réception</div></div>
-          <div class="tl-item reveal"><div class="tl-time">19h00</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Dîner</div></div>
-          <div class="tl-item reveal"><div class="tl-time">21h00</div><div class="tl-mid"><div class="tl-dot"></div></div><div class="tl-name">Soirée</div></div>
+      <h2 class="sec-title light cinzel">Programme de l'Événement</h2>
+      <div class="frame-card reveal">
+        <img src="invite-frame.png" alt="" class="frame-bg-img" aria-hidden="true">
+        <div class="frame-content">
+          <div class="timeline">
+            <div class="tl-item"><div class="tl-time">17h30</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Cortège de mariage</div></div>
+            <div class="tl-item"><div class="tl-time">18h00</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Réception</div></div>
+            <div class="tl-item"><div class="tl-time">19h00</div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-name">Dîner</div></div>
+            <div class="tl-item"><div class="tl-time">21h00</div><div class="tl-mid"><div class="tl-dot"></div></div><div class="tl-name">Soirée</div></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ⑥ DÉTAILS -->
+  <!-- ⑥ DÉTAILS — title ABOVE the frame -->
   <section class="sec details-sec">
     <div class="sec-inner">
-      <!-- NO sec-label above -->
-      <h2 class="sec-title" style="font-family:var(--serif);font-style:italic">Détails de l'Événement</h2>
-      <div class="details-list">
-        <div class="det-item reveal"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Veuillez arriver à l'heure</div></div>
-        <div class="det-item reveal"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Confirmation de présence requise</div></div>
-        <div class="det-item reveal"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Photos interdites pendant la cérémonie</div></div>
-        <div class="det-item reveal"><div class="det-dot-wrap"><div class="det-dot"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Tenue de soirée exigée</div></div>
+      <h2 class="sec-title cinzel">Détails de l'Événement</h2>
+      <div class="frame-card reveal">
+        <img src="invite-frame.png" alt="" class="frame-bg-img" aria-hidden="true">
+        <div class="frame-content">
+          <div class="details-list">
+            <div class="det-item"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Veuillez arriver à l'heure</div></div>
+            <div class="det-item"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Confirmation de présence requise</div></div>
+            <div class="det-item"><div class="det-dot-wrap"><div class="det-dot"></div><div class="det-vl"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Photos interdites pendant la cérémonie</div></div>
+            <div class="det-item"><div class="det-dot-wrap"><div class="det-dot"></div></div><div class="det-card"><span class="det-icon">ⓘ</span>Tenue de soirée exigée</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -143,9 +144,8 @@
   <!-- ⑦ LOCATION -->
   <section class="sec loc-sec">
     <div class="sec-inner">
-      <div class="sec-label light">Le Lieu</div>
-      <h2 class="sec-title light"><span class="ps" style="font-size:1.3em">S</span>alle <span class="is">Benkoli</span></h2>
-      <p class="loc-addr">Salle des Fêtes Benkoli — Naqaus, Batna, Algérie</p>
+      <h2 class="sec-title light cinzel">Le Lieu · Salle Benkoli</h2>
+      <p class="loc-addr">Naqaus, Batna, Algérie</p>
       <div class="map-frame reveal">
         <iframe src="https://maps.google.com/maps?q=Salle+des+Fetes+Benkoli+Batna&output=embed"
           width="100%" height="280" style="border:0;" allowfullscreen loading="lazy"
@@ -162,14 +162,13 @@
     <div class="ty-overlay"></div>
     <div class="ty-inner">
       <div class="glove-scene">
-        <!-- Text overlaid inside the card area of the glove image -->
         <div class="glove-card-text reveal">
-          <h2 class="ty-title"><span class="ps" style="font-size:1.35em">M</span>erci</h2>
+          <h2 class="ty-title">Merci</h2>
           <div class="ty-divider">✦ ✦ ✦</div>
           <p class="ty-body">Votre présence à nos côtés en ce jour si précieux est le plus beau des cadeaux. Merci de partager avec nous ce moment unique, rempli d'amour et de bonheur.</p>
-          <p class="ty-sign"><span class="ps">A</span>hmad <span class="is">&amp;</span> <span class="ps">S</span>amara</p>
+          <p class="ty-sign">Ahmad &amp; Samara</p>
         </div>
-        <img src="glove-hand.png" alt="" class="glove-img" aria-hidden="true">
+        <img src="glove-hand.jpg" alt="" class="glove-img" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
@@ -177,8 +176,7 @@
   <!-- ⑨ RSVP -->
   <section class="sec rsvp-sec" id="rsvp">
     <div class="sec-inner" style="text-align:center">
-      <div class="sec-label">Réponse</div>
-      <h2 class="sec-title rsvp-big"><span class="ps" style="font-size:1.2em">S</span>erez-vous<br><span class="is" style="font-style:italic">des nôtres ?</span></h2>
+      <h2 class="sec-title rsvp-big">Serez-vous<br><span style="font-style:italic">des nôtres ?</span></h2>
       <p class="rsvp-sub">Nous serions profondément honorés de vous compter parmi nous.</p>
       <div class="rsvp-form reveal">
         <div class="fg"><label>Nom complet</label><input type="text" id="rsvp-name" placeholder="Votre nom"></div>
@@ -201,7 +199,7 @@
   </section>
 
   <footer class="site-footer">
-    <p class="ft-names"><span class="ps">A</span>hmad <span class="ft-amp">&amp;</span> <span class="ps">S</span>amara</p>
+    <p class="ft-names">Ahmad <span class="ft-amp">&amp;</span> Samara</p>
     <p class="ft-date">16 · 08 · 2026</p>
   </footer>
 </main>
@@ -209,19 +207,19 @@
 <!-- ══ NAVBAR ══ -->
 <nav class="lnav hidden" id="lnav">
   <button class="ni" id="nav-voeux" title="Vœux">
-    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
     <span>Vœux</span>
   </button>
   <button class="ni" id="nav-agenda" title="Agenda">
-    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     <span>Agenda</span>
   </button>
   <button class="ni" id="nav-contact" title="Contact">
-    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.07 3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.07 3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
     <span>Contact</span>
   </button>
   <button class="ni" id="nav-lieu" title="Lieu">
-    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    <svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
     <span>Lieu</span>
   </button>
 </nav>
@@ -230,7 +228,7 @@
 <div id="modal-voeux" class="modal-ov hidden">
   <div class="modal-box">
     <button class="mc">✕</button>
-    <h3 class="mt"><span class="ps" style="font-size:1.3em">F</span>élicitations</h3>
+    <h3 class="mt cinzel">Félicitations</h3>
     <div class="mdiv">✦</div>
     <p class="msub">Partagez un mot doux pour les mariés</p>
     <textarea id="voeux-txt" class="mta" placeholder="Vos sincères félicitations…" rows="4"></textarea>
@@ -243,7 +241,7 @@
 <div id="modal-contact" class="modal-ov hidden">
   <div class="modal-box">
     <button class="mc">✕</button>
-    <h3 class="mt"><span class="ps" style="font-size:1.3em">C</span>ontact</h3>
+    <h3 class="mt cinzel">Contact</h3>
     <div class="mdiv">✦</div>
     <p class="msub">Pour toute question, contactez-nous</p>
     <a href="tel:0774843099" class="clink">
